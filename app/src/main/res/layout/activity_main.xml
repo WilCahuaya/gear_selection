@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_marginHorizontal="36px">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selección de Engranaje"
+        android:textSize="40px"
+        android:textStyle="bold"
+        android:textColor="@color/my_light_primary"
+        android:textAlignment="center"
+        android:layout_margin="32px"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="7.5px">
+
+            <TextView
+                android:id="@+id/txtModulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Módulo"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_layaut"
+                android:orientation="vertical"
+                android:paddingLeft="35px">
+
+                <Spinner
+                    android:id="@+id/spnModulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/my_light_primary"
+                    android:popupBackground="@color/my_light_primary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="7.55px">
+
+            <TextView
+                android:id="@+id/txtNumeroDiente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="N° de Diente"
+                android:textColor="@color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/border_layaut"
+                android:orientation="vertical"
+                android:paddingLeft="35px">
+
+            <Spinner
+                android:id="@+id/spnNumeroDientes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/my_light_primary"
+                android:popupBackground="@color/my_light_primary" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relación de Transmisión"
+        android:textColor="@color/black" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25px">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtRelacionTransision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/my_light_text_color_hint"
+            android:hint="rt" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_booton"
+        android:textColor="@color/white"
+        android:text="Calcular" />
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_light_primary"
+        android:orientation="horizontal"
+        android:layout_marginVertical="35px"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N° de diente del piñon"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtNumeroDientesPinon"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="np = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+           android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N° de diente del conducido"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtNumeroDientesConducido"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="ng = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diametro de paso del piñon"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtDiametroPasoPinon"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="dp = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diametro de paso del conducido"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtDiametroPasoConducido"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="dg = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paso circular"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtPasoCircular"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="p = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Distancia entre centros"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20px">
+        <EditText
+            android:id="@+id/edtDistanciaEntreCentros"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="c = "
+            android:textColor="@color/black"
+            android:drawableTintMode="multiply"
+            android:paddingLeft="35px"
+            android:enabled="false"
+            android:layout_weight="0.2"
+            android:background="@drawable/border_left"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="mm"
+            android:textColor="@color/white"
+            android:drawableTintMode="multiply"
+            android:enabled="false"
+            android:paddingLeft="20px"
+            android:layout_weight="1"
+            android:background="@drawable/line_left"/>
+    </LinearLayout>
+
+
+</LinearLayout>
